@@ -21,7 +21,7 @@ function AppMain() {
 
     function updateFormInfo(event) {
         const key = event.target.name;
-        const inputType = event.target.type;
+       
         const newObject = {
             ...formInfo,
             [key]: event.target.value,
@@ -34,8 +34,8 @@ function AppMain() {
     function submitNewForm(event) {
         event.preventDefault();
 
-        setTickets((current) => [...current, formData]);
-        setFormData(initialFormData);
+        setNewPost((current) => [...current, formInfo]);
+        setFormInfo(initialFormInfo);
     }
 
     return (
@@ -79,6 +79,8 @@ function AppMain() {
                             ></textarea>
                             </div>
                         </div>
+
+
 
                         <button type="submit" className="btn text-center">
                             Submit new post

@@ -41,8 +41,8 @@ main {
     margin-bottom: 10px;
 }
 
-.mb-20{
-  margin-bottom: 20px;
+.mb-30{
+  margin-bottom: 30px;
 }
 
 .py-40 {
@@ -78,12 +78,11 @@ main {
 
 
 .btn {
-  background-color:rgb(255, 228, 196);
+  background-color:rgb(97, 213, 186);
   border:rgb(32, 123, 243);
   text-transform: uppercase;
 
   padding: 10px 20px;
-  margin-left: 20px;
   border-radius: 5px;
 }
 

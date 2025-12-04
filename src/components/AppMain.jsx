@@ -2,8 +2,21 @@ import { useState } from "react";
 
 
 
+
+const initialFormInfo = {
+    author: "",
+    title: "",
+    body: "",
+    public: "true",
+
+};
+
+
 function AppMain() {
-    const [formInfo, setFormInfo] = useState(initialFormInfo)
+    const [formInfo, setFormInfo] = useState(initialFormInfo);
+    const [newPost, setNewPost] = useState()
+
+
 
 
     function updateFormInfo(event) {
@@ -16,17 +29,27 @@ function AppMain() {
         setFormInfo(newObject);
     }
 
+
+
+    function submitNewForm(event) {
+        event.preventDefault();
+
+        setTickets((current) => [...current, formData]);
+        setFormData(initialFormData);
+    }
+
     return (
         <>
             <main>
                 <div className="container flex-center">
-                    <form action="">
+                    <form onSubmit={submitNewForm} action="">
                         <input
                             name="author"
                             id="name"
                             type="text"
                             className="form-control"
                             value={formInfo.name}
+                            onChange={updateFormInfo}
                         />
 
                     </form>
